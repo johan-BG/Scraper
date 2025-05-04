@@ -14,7 +14,15 @@ import json
 
 class RecursiveOCRSpider(scrapy.Spider):
     name = "recursive_ocr"
-    start_urls = ['https://sanskritdocuments.org/scannedbooks/asisanskritpdfs.html']
+    start_urls = [
+                  'https://sanskritdocuments.org/scannedbooks/asisanskritpdfs.html',
+                  'https://sanskritdocuments.org/scannedbooks/asiallpdfs.html',
+                  'https://indianculture.gov.in/ebooks',
+                  'https://ignca.gov.in/divisionss/asi-books/',
+                  'https://archive.org/details/TFIC_ASI_Books/ACatalogueOfTheSamskritManuscriptsInTheAdyarLibraryPt.1/',
+                  'https://indianmanuscripts.com/',
+                  'https://niimh.nic.in/ebooks/ayuhandbook/index.php'
+                ]
     visited_urls = set()
 
     custom_settings = {
