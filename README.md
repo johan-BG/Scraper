@@ -1,24 +1,32 @@
-### Scraper
+## Scraper
 
-This project is a **recursive web scraper** built using **Scrapy**, **Tesseract OCR**, and **spaCy NLP**. It is designed to crawl the given url's scanned books archive, download PDF files, extract text using OCR, and retrieve metadata such as author name, publication year, and language.
+A Scrapy-based web scraper that downloads documents, performs OCR (Optical Character Recognition) on them, and extracts metadata such as authors, publication year, and language. The metadata is saved as JSON and checksums are used to detect changes or duplicates.
 
----
+## Features
 
-## 🧠 Features
+- Crawls websites recursively and respects `robots.txt`
+- Extracts content from PDF files using OCR (via Tesseract)
+- Metadata extraction includes:
+  - Author(s)
+  - Publication year
+  - Language
+  - Content (from OCR)
+  - Checksum for file change detection
+- Saves metadata as JSON for each document
+- Handles large PDFs efficiently
 
-- Recursively crawls web pages for PDFs.
-- Extracts text from PDF files using Tesseract OCR.
-- Extracts metadata like:
-  - **Title** (from link text)
-  - **Author** (via regex and NLP fallback)
-  - **Publication Year**
-  - **Language** (auto-detected)
-  - **Checksum** (for file integrity and update detection)
-- Skips already downloaded or unchanged files using checksum verification.
-- Saves metadata as `.json` files alongside the PDFs.
-- Obeys `robots.txt` and respects download delays.
+## 🛠 Installation
 
----
+To install all required dependencies (both system and Python packages), use the provided `install.sh` script.
 
-## 📁 Project Structure
+### Prerequisites
 
+- Python 3.7 or higher
+- Bash-compatible terminal (Linux/macOS or WSL on Windows)
+
+### Steps
+
+1. **Make the script executable**:
+
+   ```bash
+   chmod +x install.sh
