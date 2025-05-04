@@ -1,0 +1,6 @@
+scrapy
+spacy
+langdetect
+pytesseract
+pdf2image
+Pillow
